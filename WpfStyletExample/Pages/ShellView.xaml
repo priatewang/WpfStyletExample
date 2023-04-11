@@ -7,30 +7,32 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:s="https://github.com/canton7/Stylet"
     Title="Stylet Start Project"
-    Width="800"
-    Height="450"
+    Width="970"
+    Height="739"
     d:DataContext="{d:DesignInstance local:ShellViewModel}"
     mc:Ignorable="d">
     <Grid>
 
         <TextBlock
+            Margin="0,100,0,0"
             HorizontalAlignment="Center"
-            VerticalAlignment="Center"
+            VerticalAlignment="Top"
             FontSize="30"
             Text="{Binding Title}" />
         <Button
             Width="112"
             Height="30"
-            Margin="0,360,0,0"
-            HorizontalAlignment="Center"
+            Margin="725,80,0,0"
+            HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Command="{s:Action ChangeTitle}"
+            s:View.ActionTarget="{Binding UserPage}"
+            Command="{s:Action OutUseTest}"
             Content="修改标题" />
         <ContentControl
-            Width="425"
-            Height="277"
-            Margin="10,19,0,0"
-            HorizontalAlignment="Left"
+            Width="800"
+            Height="450"
+            Margin="0,188,0,0"
+            HorizontalAlignment="Center"
             VerticalAlignment="Top"
             s:View.Model="{Binding UserPage}" />
 

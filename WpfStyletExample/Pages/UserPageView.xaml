@@ -10,39 +10,88 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
     <Grid Background="#FF2B3D52">
+        <Grid Margin="0,0,512,10">
+            <TextBlock
+                Margin="76,114,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="姓名："
+                TextWrapping="Wrap" />
+            <TextBox
+                Width="120"
+                Margin="117,112,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="张三"
+                TextWrapping="Wrap" />
+            <TextBox
+                Width="120"
+                Margin="117,112,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding Name}"
+                TextWrapping="Wrap" />
+            <Button
+                Width="146"
+                Height="41"
+                Margin="104,0,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Center"
+                Content="改名"
+                PreviewMouseDown="{s:Action ChangingName}"
+                PreviewMouseUp="{s:Action ChangedName}" />
+            <TextBlock
+                Margin="26,19,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="测试命令/事件"
+                TextWrapping="Wrap" />
+
+            <TextBlock
+                Margin="136,51,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding ActualName}"
+                TextWrapping="Wrap" />
+        </Grid>
+        <Grid Margin="293,0,267,0">
+
+            <Button
+                Width="146"
+                Height="41"
+                Margin="45,184,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{s:Action TestCmd}"
+                Content="测试2" />
+            <Button
+                Width="146"
+                Height="41"
+                Margin="45,247,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Command="{s:Action ChangeTestCmd}"
+                Content="控制属性" />
+            <TextBlock
+                Margin="80,70,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Text="{Binding TestTxt}"
+                TextWrapping="Wrap" />
+        </Grid>
         <TextBlock
-            Margin="76,114,0,0"
+            Margin="653,35,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="姓名："
+            Text="外部事件操作"
             TextWrapping="Wrap" />
-        <TextBox
-            Width="120"
-            Margin="117,112,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Text="张三"
-            TextWrapping="Wrap" />
-        <TextBox
-            Width="120"
-            Margin="117,112,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Text="{Binding Name}"
-            TextWrapping="Wrap" />
-        <Button
-            Width="146"
-            Height="41"
-            Margin="104,200,0,0"
-            HorizontalAlignment="Left"
-            VerticalAlignment="Top"
-            Command="{s:Action ChangeName}"
-            Content="改名" />
         <TextBlock
-            Margin="136,51,0,0"
+            Margin="653,55,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            Text="{Binding ActualName}"
+            FontSize="20"
+            Text="{Binding OutText}"
             TextWrapping="Wrap" />
+
     </Grid>
 </UserControl>
