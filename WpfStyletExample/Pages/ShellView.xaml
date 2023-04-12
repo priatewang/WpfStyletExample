@@ -22,19 +22,56 @@
         <Button
             Width="112"
             Height="30"
-            Margin="725,80,0,0"
+            Margin="59,54,0,0"
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             s:View.ActionTarget="{Binding UserPage}"
             Command="{s:Action OutUseTest}"
             Content="修改标题" />
         <ContentControl
-            Width="800"
+            Width="477"
             Height="450"
-            Margin="0,188,0,0"
-            HorizontalAlignment="Center"
+            Margin="59,188,0,0"
+            HorizontalAlignment="Left"
             VerticalAlignment="Top"
-            s:View.Model="{Binding UserPage}" />
+            s:View.Model="{Binding UserPage}"
+            RenderTransformOrigin="0.5,0.5">
+            <ContentControl.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1" />
+                    <SkewTransform />
+                    <RotateTransform />
+                    <TranslateTransform />
+                </TransformGroup>
+            </ContentControl.RenderTransform>
+        </ContentControl>
+        <Button
+            Width="140"
+            Height="57"
+            Margin="781,188,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{s:Action ShowDialogAbout}"
+            Content="打开弹窗"
+            FontSize="20" />
+        <Button
+            Width="140"
+            Height="57"
+            Margin="781,269,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{s:Action ShowAbout}"
+            Content="打开窗口"
+            FontSize="20" />
+        <Button
+            Width="140"
+            Height="57"
+            Margin="781,356,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{s:Action ShowMsg}"
+            Content="打开消息框"
+            FontSize="20" />
 
     </Grid>
 </Window>
