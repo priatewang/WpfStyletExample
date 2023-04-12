@@ -5,6 +5,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfStyletExample.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:s="https://github.com/canton7/Stylet"
     Title="关于"
     Width="315"
     Height="159"
@@ -34,6 +35,14 @@
             VerticalAlignment="Top"
             Text="{Binding Owner}"
             TextWrapping="Wrap" />
+        <Button
+            Width="39"
+            Height="26"
+            Margin="21,21,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Command="{s:Action Close}"
+            Content="关闭" />
 
     </Grid>
 </Window>

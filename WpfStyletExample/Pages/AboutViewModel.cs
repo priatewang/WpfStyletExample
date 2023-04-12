@@ -20,5 +20,10 @@ namespace WpfStyletExample.Pages
 
             Version = "1.0.999999";
         }
+
+        public void Close()
+        {
+            this.RequestClose();
+        }
     }
 }
